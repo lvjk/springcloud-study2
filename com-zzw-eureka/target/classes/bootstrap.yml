@@ -1,6 +1,6 @@
 spring:
   cloud:
     config:
-      uri: http://localhost:8761
+      uri: http://www.zzw.com:8761
       name: eureka
       profile: dev
