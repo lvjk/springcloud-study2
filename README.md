@@ -9,7 +9,8 @@
 门禁服务 | com.zzw.microservice| com-zzw-entrance-guard-service| com-zzw-parent| common|jar
 资讯服务 | com.zzw.microservice| com-zzw-information-service| com-zzw-parent| common|jar
 设备管理 | com.zzw.microservice| com-zzw-device-service| com-zzw-parent| common|jar
-eureka+config | com.zzw.microservice| com-zzw-eureka-config| com-zzw-parent| common|jar
+- [x] 注册中心 | com.zzw.microservice| com-zzw-eureka| com-zzw-parent| common|jar
+- [x] 配置中心 | com.zzw.microservice| com-zzw-config| com-zzw-parent| common|jar
 其他服务 | com.zzw.microservice| com-zzw-other| com-zzw-parent| common|jar
 后台 | com.zzw.microservice| com-zzw-web| com-zzw-parent| 基础数据,安防服务,门禁服务,资讯服务,设备管理|jar
 手机接口 | com.zzw.microservice| com-zzw-api| com-zzw-parent| 基础数据,安防服务,门禁服务,资讯服务,设备管理|jar
@@ -27,7 +28,7 @@ eureka+config | com.zzw.microservice| com-zzw-eureka-config| com-zzw-parent| com
 设备管理 | 8086
 eureka+config | 8761
 其他服务 | 8087
-后台 | 80
+后台 | 8080
 手机接口|81 
 
 
@@ -43,3 +44,13 @@ eureka+config | 8761
 - http://git.oschina.net/handsomeho/spring-cloud-study
 - Spring Cloud的微服务系统-完美参考
 - http://git.oschina.net/qinqiang2000/spring-cloud-base
+- 高性能，高灵活性，最简洁的Java数据库访问工具
+- http://git.oschina.net/codefinger/codefinger-dao
+
+# 启动顺序
+1. ConfigServerApplication
+2. EurekaServerApplication
+3. BaseDataApplication 访问 http://www.zzw.com:8081/list 
+4.  搞定 ShiroApp -> 访问基础数据模块->beetl渲染-> jpa该jdbc
+5.  回家
+
