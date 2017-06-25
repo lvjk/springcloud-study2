@@ -1,3 +1,8 @@
+# 准备
+1. 编辑 C:\Windows\System32\drivers\etc\hosts
+2. 127.0.0.1       localhost
+3. 127.0.0.1       www.zzw.com
+
 # 微服务模块
 
 模块名 | group Id |Artifact Id | parent Artifact Id | 模块间依赖| packaging
