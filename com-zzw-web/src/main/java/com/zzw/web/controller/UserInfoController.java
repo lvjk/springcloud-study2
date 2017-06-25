@@ -16,7 +16,7 @@ import com.zzw.web.domain.User;
 
  
 @Controller
-@RequestMapping("/userInfo")
+@RequestMapping("/user")
 public class UserInfoController {
 	private Logger logger =  LoggerFactory.getLogger(this.getClass());
 	
@@ -27,15 +27,24 @@ public class UserInfoController {
      * 用户查询.
      * @return
      */
-    @RequestMapping("/userList/{id}")
-    public String userInfo(@PathVariable("id") Long id,ModelMap model){
-       logger.info("日志输出测试 Debug==>userInfo");
+    @RequestMapping("/list")
+    public String list(){
+       logger.info("日志输出测试 Debug==>userList");
+       User user = restTemplate.getForObject("http://COM-ZZW-BASEDATA-SERVICE/", User.class);
+   	   System.out.println(user.getUsername());
+   	   //model.put("user", user);
+       return "userInfo";
+    }
+   
+    @RequestMapping("/info/{id}")
+    public String info(@PathVariable("id") Long id,ModelMap model){
+       logger.info("日志输出测试==>userInfo");
        User user = restTemplate.getForObject("http://COM-ZZW-BASEDATA-SERVICE/"+id, User.class);
    	   System.out.println(user.getUsername());
    	   model.put("user", user);
        return "userInfo";
     }
-   
+    
     /**
      * 用户添加;
      * @return
