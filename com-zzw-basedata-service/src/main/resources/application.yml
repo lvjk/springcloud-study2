@@ -1,0 +1,38 @@
+########################################################
+###servie base info
+########################################################
+server:
+  port: 8000
+spring:
+  application:
+    name: com-zzw-basedata-service         # 项目名称用小写
+  datasource:
+    platform: mysql
+#    schema: classpath:schema.sql        # 指定MySQL数据库的建表脚本
+#    data: classpath:data.sql            # 指定MySQL数据库的insert脚本
+#    initialize: true                    # 要初始化这些数据库文件    
+    continue-on-error: false            # 有了错误不继续运行
+    driver-class-name: com.mysql.jdbc.Driver #mysql驱动
+    url: jdbc:mysql://localhost:3306/db_base  #基础数据库名,用空就从config 去拉
+    username: root                            #数据用户名，需要从config-server中发现
+    password: 123456                            #数据用密码，需要从config-server中发现 
+########################################################
+###logback
+########################################################
+logging:
+  level:
+    root: INFO
+    org.springframework: info
+    org.springframework.jdbc.core: trace    
+    com.zzw.service: trace
+    com.zzw.test: trace
+#  file: ./zzw-base-data-service.log
+########################################################
+###连接eureka
+########################################################  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/    # 指定注册中心的地址
+  instance:
+    preferIpAddress: true
