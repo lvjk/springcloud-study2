@@ -2,7 +2,7 @@
 ###servie base info
 ########################################################
 server:
-  port: 8000
+  port: 8081
 spring:
   application:
     name: com-zzw-basedata-service         # 项目名称用小写
