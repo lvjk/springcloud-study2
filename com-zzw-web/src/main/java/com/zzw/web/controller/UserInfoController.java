@@ -1,5 +1,7 @@
 package com.zzw.web.controller;
 
+import java.util.List;
+
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +11,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.zzw.web.domain.User;
 
@@ -28,12 +29,12 @@ public class UserInfoController {
      * @return
      */
     @RequestMapping("/list")
-    public String list(){
+    public String list(ModelMap model){
        logger.info("日志输出测试 Debug==>userList");
-       User user = restTemplate.getForObject("http://COM-ZZW-BASEDATA-SERVICE/", User.class);
-   	   System.out.println(user.getUsername());
-   	   //model.put("user", user);
-       return "userInfo";
+       List<User> list = (List<User>)restTemplate.getForObject("http://COM-ZZW-BASEDATA-SERVICE/list",  List.class);
+   	   System.out.println(list.size());
+   	   model.put("list", list);
+       return "userList";
     }
    
     @RequestMapping("/info/{id}")
@@ -41,6 +42,7 @@ public class UserInfoController {
        logger.info("日志输出测试==>userInfo");
        User user = restTemplate.getForObject("http://COM-ZZW-BASEDATA-SERVICE/"+id, User.class);
    	   System.out.println(user.getUsername());
+   	   model.remove("user");
    	   model.put("user", user);
        return "userInfo";
     }

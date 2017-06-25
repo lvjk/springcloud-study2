@@ -25,7 +25,7 @@ public class UserInfo implements Serializable{
    
     @Column(unique=true)
     private String username;//账号.
-   
+    @Column(name="name",length=255)
     private String name;//名称（昵称或者真实姓名，不同系统不同定义）
    
     private String password; //密码;
