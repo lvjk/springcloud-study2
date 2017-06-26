@@ -12,7 +12,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 
-import com.zzw.web.dao.UserInfoRepository;
+import com.zzw.web.dao.UserRepository;
 import com.zzw.web.domain.SysPermission;
 import com.zzw.web.domain.SysRole;
 import com.zzw.web.domain.UserInfo;
@@ -25,8 +25,8 @@ import com.zzw.web.domain.UserInfo;
 public class MyShiroRealm extends AuthorizingRealm{
  
        
-    @Resource
-    private UserInfoRepository userInfoDao;
+    @Resource(name="useDao")
+    private UserRepository userInfoDao;
    
     /**
      * 认证信息.(身份验证)

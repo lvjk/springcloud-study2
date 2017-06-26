@@ -13,16 +13,7 @@ spring:
     url: jdbc:mysql://localhost:3306/boot_shiro  #基础数据库名,用空就从config 去拉
     username: root                            #数据用户名，需要从config-server中发现
     password: 123456                            #数据用密码，需要从config-server中发现
-  jpa:
-    database: mysql
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-      naming:
-        implicit-strategy: org.hibernate.cfg.DefaultNamingStrategy
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.MySQL5Dialect
+
 ########################################################
 ###logback
 ########################################################
@@ -33,7 +24,7 @@ logging:
     org.springframework.jdbc.core: trace    
     com.zzw.service: trace
     com.zzw.test: trace
-#  file: ./zzw-base-data-service.log  
+    file: ./com-zzw-web.log  
 ########################################################
 ###连接eureka
 ########################################################  
@@ -45,20 +36,6 @@ eureka:
     preferIpAddress: true
     
     
-########################################################
-### Java Persistence Api
-########################################################
-# Specify the DBMS
-# spring.jpa.database = MYSQL
-# Show or not log for each sql query
-# spring.jpa.show-sql = true
-# Hibernate ddl auto (create, create-drop, update)
-# spring.jpa.hibernate.ddl-auto = update
 
-# Naming strategy
-#[org.hibernate.cfg.ImprovedNamingStrategy | org.hibernate.cfg.DefaultNamingStrategy]
-# spring.jpa.hibernate.naming-strategy = org.hibernate.cfg.DefaultNamingStrategy
-# stripped before adding them to the entity manager)
-#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 
    
