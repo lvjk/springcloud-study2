@@ -5,4 +5,4 @@
  * @author Administrator
  *
  */
-package com.zzw.common;
+package com.zzw.domain;

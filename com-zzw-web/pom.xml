@@ -10,13 +10,14 @@
   <description>后台支撑beetl+shiro+redis</description>
   
   <dependencies>
-       <!-- 
+       <!-- 模块依赖 -->
   		<dependency>
 			<groupId>com.zzw.microservice</groupId>
 			<artifactId>com-zzw-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
-		 -->
+		 
         <!-- 添加Eureka的依赖 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

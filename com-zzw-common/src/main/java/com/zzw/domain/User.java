@@ -1,4 +1,4 @@
-package com.zzw.web.domain;
+package com.zzw.domain;
 
 public class User {
 	private Long id;
