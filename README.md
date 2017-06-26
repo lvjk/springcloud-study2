@@ -50,3 +50,6 @@
 - http://git.oschina.net/handsomeho/spring-cloud-study
 - Spring Cloud的微服务系统-完美参考
 - http://git.oschina.net/qinqiang2000/spring-cloud-base
+
+# 生成代码
+# 写ppt
