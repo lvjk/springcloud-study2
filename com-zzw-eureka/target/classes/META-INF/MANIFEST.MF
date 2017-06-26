@@ -3,7 +3,7 @@ Implementation-Title: ￦ﾔﾯ￦ﾒﾑ￦ﾜﾍ￥ﾊﾡ￦ﾨﾡ￥ﾝﾗ
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: Administrator
 Implementation-Vendor-Id: com.zzw.microservice
-Build-Jdk: 1.8.0_101
+Build-Jdk: 1.8.0_91
 Implementation-URL: http://projects.spring.io/spring-boot/com-zzw-pare
  nt/com-zzw-eureka/
 Created-By: Maven Integration for Eclipse
