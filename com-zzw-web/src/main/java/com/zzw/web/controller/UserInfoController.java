@@ -51,7 +51,7 @@ public class UserInfoController {
      * 用户添加;
      * @return
      */
-    @RequestMapping("/userAdd")
+    @RequestMapping("/add")
     @RequiresPermissions("userinfo:add")//权限管理;
     public String userInfoAdd(){
     	//User list = restTemplate.getForObject("http://COM-ZZW-BASEDATA-SERVICE/list", User.class);

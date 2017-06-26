@@ -1,5 +1,5 @@
 package com.zzw.web.config;
-
+/*
 import java.io.IOException;
 
 import org.beetl.core.resource.WebAppResourceLoader;
@@ -46,3 +46,4 @@ public class BeetlConfiguration {
 		return beetlSpringViewResolver;
 	}
 }
+*/

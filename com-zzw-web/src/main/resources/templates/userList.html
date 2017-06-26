@@ -1,4 +1,3 @@
-<% DIRECTIVE SAFE_OUTPUT_OPEN; %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,20 +11,13 @@
 			<th>id</th>
 			<th>姓名</th>
 			<th>年龄</th>
-		</tr>
-		<%		   
-		  for(user in list){
-		%>
-		<tr>
-			<td>${user.id}</td>
-			<td>${user.username}</td>
-			<td>${user.age}</td>
-			<td><a href="/user/info/${user.id}">查看</a></td>
-		</tr>
-		<%
-		 }
-		%>
+		</tr>		
+		<tr th:each="user: ${list}">
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.age}"></td>
+			<td><a th:href="@{'/user/info/'+${user.id}}">查看</a></td>			
+		</tr>		
 	</table>
 </body>
 </html>
-<% DIRECTIVE SAFE_OUTPUT_CLOSE; %>
