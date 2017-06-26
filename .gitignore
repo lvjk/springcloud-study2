@@ -1,4 +1,4 @@
-﻿*.class
+*.class
 
 #Mac os File System
 .DS_Store
@@ -7,10 +7,10 @@
 #Maven target
 target/*
 
-src/main/lib
+#src/main/lib
 
 # Mobile Tools for Java (J2ME)
-.mtj.tmp/
+#.mtj.tmp/
 
 # Package Files #
 *.settings
@@ -19,7 +19,7 @@ src/main/lib
 *.ear
 *.log
 *.iml
-hs_err_pid*
+#hs_err_pid*
 
 .classpath
 .project
