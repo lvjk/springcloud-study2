@@ -22,6 +22,6 @@ target/*
 #hs_err_pid*
 
 .classpath
-.project
+#.project
 
 #/bin/
