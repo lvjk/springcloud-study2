@@ -1,6 +1,0 @@
-spring:
-  cloud:
-    config:
-      uri: http://www.zzw.com:8001
-      name: eureka
-      profile: dev
