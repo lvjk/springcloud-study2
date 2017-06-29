@@ -18,7 +18,7 @@ import com.zzw.basedata.service.domain.User;
  * 作用：
  * ① 测试服务实例的相关内容
  * ② 为后来的服务做提供
- * @author eacdy
+ * @author 草原狼
  */
 @RestController
 public class UserController {
