@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>用户查询界面beetl渲染</h3>
+	<table>
+		<tr>
+			<th>id</th>
+			<th>姓名</th>
+			<th>年龄</th>
+		</tr>		
+		<tr th:each="user: ${list}">
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.age}"></td>
+			<td><a th:href="@{'/user/info/'+${user.id}}">查看</a></td>			
+		</tr>		
+	</table>
+</body>
+</html>

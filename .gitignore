@@ -1,0 +1,10 @@
+.DS_Store
+._.DS_Store
+#Maven target
+target/*
+*.settings
+*.jar
+*.war
+*.ear
+*.log
+*.iml

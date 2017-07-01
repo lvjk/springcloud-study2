@@ -1,5 +1,5 @@
 package com.zzw.web.config;
-
+/*
 import java.io.IOException;
 
 import org.beetl.core.resource.WebAppResourceLoader;
@@ -30,7 +30,7 @@ public class BeetlConfiguration {
 		}
 
 		// 读取配置文件信息
-		beetlGroupUtilConfiguration.setConfigFileResource(patternResolver.getResource("classpath:beetl.properties"));
+		//beetlGroupUtilConfiguration.setConfigFileResource(patternResolver.getResource("classpath:beetl.properties"));
 		return beetlGroupUtilConfiguration;
 	}
 
@@ -46,3 +46,4 @@ public class BeetlConfiguration {
 		return beetlSpringViewResolver;
 	}
 }
+*/

@@ -18,6 +18,8 @@ import com.zzw.basedata.service.domain.User;
 
 @Repository(value = "useDao")
 public class UserRepository {
+	protected static final String INSERT_ALL = "insert into users (id,username,age) values (:id,:username,:age)";
+    protected static final String UPDATE_ALL = "update users set username=:username,age=:age where id=:id";
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
@@ -34,19 +36,21 @@ public class UserRepository {
 	public User create(final User user) {
 		final String sql = "insert into users(id,username,age) values(?,?,?)";
 		// KeyHolder holder = new GeneratedKeyHolder();
-		jdbcTemplate.update(new PreparedStatementCreator() {
-			@Override
-			public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-				PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-				ps.setLong(1, user.getId());
-				ps.setString(2, user.getUsername());
-				ps.setInt(3, user.getAge());
-				return ps;
-			}
-		}/* , holder */);
+//		jdbcTemplate.update(new PreparedStatementCreator() {
+//			@Override
+//			public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
+//				PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);				
+//				ps.setLong(1, user.getId());
+//				ps.setString(2, user.getUsername());
+//				ps.setInt(3, user.getAge());
+//				return ps;
+//			}
+//		}/* , holder */);
 
 		// long newUserId = holder.getKey().intValue();
 		// user.setId(newUserId);
+		
+		jdbcTemplate.update(INSERT_ALL, new Object[]{user.getId(),user.getUsername(),user.getAge()});
 		return user;
 	}
 

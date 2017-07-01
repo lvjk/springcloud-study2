@@ -1,0 +1,41 @@
+########################################################
+###com-zzw-web info
+########################################################
+server:
+  port: 8080
+spring:
+  application:
+    name: com-zzw-web
+  datasource:
+    platform: mysql
+    continue-on-error: false            # 有了错误不继续运行
+    driver-class-name: com.mysql.jdbc.Driver #mysql驱动
+    url: jdbc:mysql://localhost:3306/boot_shiro  #基础数据库名,用空就从config 去拉
+    username: root                            #数据用户名，需要从config-server中发现
+    password: 123456                            #数据用密码，需要从config-server中发现
+
+########################################################
+###logback
+########################################################
+logging:
+  level:
+    root: INFO
+    org.springframework: info
+    org.springframework.jdbc.core: trace    
+    com.zzw.service: trace
+    com.zzw.test: trace
+    file: ./com-zzw-web.log  
+########################################################
+###连接eureka
+########################################################  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://www.zzw.com:8761/eureka/    # 指定注册中心的地址
+  instance:
+    preferIpAddress: true
+    
+    
+
+
+   

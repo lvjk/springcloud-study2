@@ -9,8 +9,8 @@
 门禁服务 | com.zzw.microservice| com-zzw-entrance-guard-service| com-zzw-parent| common|jar
 资讯服务 | com.zzw.microservice| com-zzw-information-service| com-zzw-parent| common|jar
 设备管理 | com.zzw.microservice| com-zzw-device-service| com-zzw-parent| common|jar
-- [x] 注册中心 | com.zzw.microservice| com-zzw-eureka| com-zzw-parent| common|jar
-- [x] 配置中心 | com.zzw.microservice| com-zzw-config| com-zzw-parent| common|jar
+注册中心 | com.zzw.microservice| com-zzw-eureka| com-zzw-parent| common|jar
+配置中心 | com.zzw.microservice| com-zzw-config| com-zzw-parent| common|jar
 其他服务 | com.zzw.microservice| com-zzw-other| com-zzw-parent| common|jar
 后台 | com.zzw.microservice| com-zzw-web| com-zzw-parent| 基础数据,安防服务,门禁服务,资讯服务,设备管理|jar
 手机接口 | com.zzw.microservice| com-zzw-api| com-zzw-parent| 基础数据,安防服务,门禁服务,资讯服务,设备管理|jar

@@ -5,10 +5,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>用户查询界面beetl渲染</h3>
-	${user.id}
-	<p>${user.username}
-	<p>${user.age}
-	<p>
+	<h3>Thymeleaf 渲染</h3>
+	<p><a th:href="@{/user/list}">列表</a></p>
+	<p th:text="${user.id}"></p>
+	<p th:text="${user.username}"></p>
+	<p th:text="${user.age}"></p>
+	
 </body>
 </html>
