@@ -108,10 +108,11 @@ public class UserInfoController {
 		logger.info("日志输出测试 ==>editUser");
 		//ResultObject result = restTemplate.postForObject("http://COM-ZZW-BASEDATA-SERVICE/add",user, ResultObject.class);
 		restTemplate.put("http://COM-ZZW-BASEDATA-SERVICE/user", user);	
-		HttpEntity<User> requestEntity = new HttpEntity<User>(user);
-		ResponseEntity<ResultObject> result = restTemplate.exchange("http://COM-ZZW-BASEDATA-SERVICE/user", HttpMethod.PUT, requestEntity, ResultObject.class);
-		logger.info("editUser ==>状态码"+result.getStatusCodeValue());
-		logger.info("editUser ==>result"+result.getBody().getCode());		
+		//HttpEntity<User> requestEntity = new HttpEntity<User>(user);
+		//ResponseEntity<ResultObject> result = restTemplate.exchange("http://COM-ZZW-BASEDATA-SERVICE/user", HttpMethod.PUT, requestEntity, ResultObject.class);
+		RestHelper rest = new RestHelper(restTemplate);
+		ResultObject result = rest.put("http://COM-ZZW-BASEDATA-SERVICE/user", user);		
+		logger.info("editUser ==>result"+result.getCode());		
 		return "redirect:/user/list";
 
 	}
