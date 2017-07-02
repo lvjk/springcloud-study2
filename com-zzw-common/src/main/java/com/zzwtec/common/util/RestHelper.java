@@ -1,11 +1,10 @@
-package com.zzw.web.controller;
+package com.zzwtec.common.util;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
-
 import com.zzwtec.common.bean.ResultObject;
 
 
@@ -57,3 +56,4 @@ public class RestHelper {
 	}
 	
 }
+

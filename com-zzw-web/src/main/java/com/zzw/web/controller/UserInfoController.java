@@ -15,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.zzwtec.common.bean.ResultObject;
 import com.zzwtec.common.bean.basedata.User;
+import com.zzwtec.common.util.RestHelper;
 
 @Controller
 @RequestMapping("/user")
