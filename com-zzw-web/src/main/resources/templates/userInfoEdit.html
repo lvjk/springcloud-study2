@@ -5,20 +5,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>用户添加界面</h3>
-	<form action="/user/add" method="post">
+	<h3>用户编辑界面</h3>
+	<form action="/user/edit" method="post">
 		<table>
 			<tr>
 				<td>id</td>
-				<td><input name="id" /></td>
+				<td><input name="id" readonly="true" th:value="${user.id}"/></td>
 			</tr>
 			<tr>
 				<td>姓名</td>
-				<td><input name="username" /></td>
+				<td><input name="username" th:value="${user.username}"/></td>
 			</tr>
 			<tr>
 				<td>年龄</td>
-				<td><input name="age" /></td>
+				<td><input name="age" th:value="${user.age}" /></td>
 			</tr>
 		</table>
 		<input name="submit" type="submit" value="提交"/>

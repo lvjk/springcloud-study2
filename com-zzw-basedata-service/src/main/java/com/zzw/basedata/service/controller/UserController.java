@@ -4,19 +4,25 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zzw.basedata.service.dao.UserRepository;
 import com.zzw.basedata.service.domain.User;
-import com.zzw.bean.ResultObject;
+import com.zzwtec.common.bean.ResultObject;
+
 
 /**
  * 作用：
@@ -26,7 +32,7 @@ import com.zzw.bean.ResultObject;
  */
 @RestController
 public class UserController {
-  
+  private Logger logger = LoggerFactory.getLogger(this.getClass());
   @Autowired
   private DiscoveryClient discoveryClient;
   
@@ -41,19 +47,27 @@ public class UserController {
    * @return user信息
    */
   @GetMapping("/{id}")
-  public User findById(@PathVariable Long id) {
+  public ResultObject findById(@PathVariable Long id) {
     User findOne = this.userRepository.findUserById(id);
-    return findOne;
+    ResultObject result = new ResultObject();
+    result.setData(findOne);
+    return result;
   }
   @GetMapping("/list")
-  public List<User> list() {
+  public ResultObject list() {
 	  List<User> list = this.userRepository.findAll();
-    return list;
+	  ResultObject result = new ResultObject();
+	  result.setData(list);
+    return result;
   }
   
   
-  @RequestMapping(name="add", method=RequestMethod.POST)
-  public ResultObject add(User user){
+  @PostMapping("/add")
+  public ResultObject add(@RequestBody User user){
+	  logger.info("日志输出测试 ==>add:"+user);
+	  logger.info("日志输出测试 ==>add.id:"+user.getId());
+	  logger.info("日志输出测试 ==>add.username:"+user.getUsername());
+	  logger.info("日志输出测试 ==>add.age:"+user.getAge());
 	  ResultObject result = new ResultObject(); 
 	  try{
 		  userRepository.create(user);
@@ -67,8 +81,8 @@ public class UserController {
   }
   
  
-  @RequestMapping(name="update",method=RequestMethod.PUT)
-  public ResultObject update(User user){
+  @PutMapping("/user")  
+  public ResultObject update(@RequestBody User user){
 	  ResultObject result = new ResultObject(); 
 	  try{
 		  userRepository.update(user);
@@ -86,7 +100,7 @@ public class UserController {
    * @param id
    */
   
-  @RequestMapping(method=RequestMethod.DELETE,value="{id}")
+  @DeleteMapping("{id}")
   public ResultObject deleteUser(@PathVariable("id") long id){
 	  ResultObject result = new ResultObject(); 
 	  try{

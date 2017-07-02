@@ -8,6 +8,10 @@
 	<h3>用户查询界面beetl渲染</h3>
 	<table>
 		<tr>
+			<td><a th:href="@{'/user/add'}">添加用户</a></td>	
+			<span th:text="${msg}"></span>		
+		</tr>
+		<tr>
 			<th>id</th>
 			<th>姓名</th>
 			<th>年龄</th>
@@ -16,7 +20,9 @@
 			<td th:text="${user.id}"></td>
 			<td th:text="${user.username}"></td>
 			<td th:text="${user.age}"></td>
-			<td><a th:href="@{'/user/info/'+${user.id}}">查看</a></td>			
+			<td><a th:href="@{'/user/info/'+${user.id}}">查看</a></td>
+			<td><a th:href="@{'/user/edit/'+${user.id}}">编辑</a></td>			
+			<td><a th:href="@{'/user/delete/'+${user.id}}">删除</a></td>
 		</tr>		
 	</table>
 </body>

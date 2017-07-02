@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zzw.basedata.dao.PropertyDao;
-import com.zzw.bean.ResultObject;
 import com.zzw.domain.basedata.Property;
+import com.zzwtec.common.bean.ResultObject;
 
 @RestController
 public class PropertyController {

@@ -1,4 +1,4 @@
-package com.zzw.domain;
+package com.zzwtec.common.bean.basedata;
 
 public class User {
 	private Long id;

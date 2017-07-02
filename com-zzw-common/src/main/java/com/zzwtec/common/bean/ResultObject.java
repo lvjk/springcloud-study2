@@ -1,4 +1,4 @@
-package com.zzw.bean;
+package com.zzwtec.common.bean;
 
 /**
  * rest接口响应结果
