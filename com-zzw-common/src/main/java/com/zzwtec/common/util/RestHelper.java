@@ -39,7 +39,7 @@ public class RestHelper {
 	}
 	
 	/**
-	 * put 请求
+	 * delete 请求
 	 * @param url
 	 * @param request
 	 * @param uriVariables
