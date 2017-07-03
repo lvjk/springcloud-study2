@@ -1,4 +1,4 @@
-package com.zzw.basedata.service.controller;
+package com.zzwtec.basedata.controller;
 
 import java.util.List;
 
@@ -15,13 +15,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.zzw.basedata.service.dao.UserRepository;
-import com.zzw.basedata.service.domain.User;
+import com.zzwtec.basedata.dao.UserRepository;
 import com.zzwtec.common.bean.ResultObject;
+import com.zzwtec.common.bean.basedata.User;
 
 
 /**

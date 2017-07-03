@@ -1,4 +1,4 @@
-package com.zzw.basedata.service.config;
+package com.zzwtec.basedata.config;
 
 import java.util.Date;
 

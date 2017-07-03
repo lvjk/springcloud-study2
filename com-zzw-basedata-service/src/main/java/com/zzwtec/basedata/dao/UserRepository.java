@@ -1,20 +1,16 @@
-package com.zzw.basedata.service.dao;
+package com.zzwtec.basedata.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.zzw.basedata.service.domain.User;
+import com.zzwtec.common.bean.basedata.User;
 
 @Repository(value = "useDao")
 public class UserRepository {
