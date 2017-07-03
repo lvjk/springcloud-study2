@@ -13,9 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.zzwtec.common.bean.basedata.User;
 
 @Repository(value = "useDao")
-public class UserRepository {
-	protected static final String INSERT_ALL = "insert into users (id,username,age) values (:id,:username,:age)";
-    protected static final String UPDATE_ALL = "update users set username=:username,age=:age where id=:id";
+public class UserRepository {	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
