@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zzw.basedata.dao.RoleDao;
-import com.zzw.bean.ResultObject;
 import com.zzw.domain.basedata.Role;
+import com.zzwtec.common.bean.ResultObject;
 
 @RestController
 public class RoleController {

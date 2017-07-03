@@ -33,7 +33,7 @@ public class UserRepository {
 		return jdbcTemplate.queryForObject("select * from users where id=?", new Object[] { id }, new UserRowMapper());
 	}
 
-	public User create(final User user) {
+	public User create(User user) {
 		final String sql = "insert into users(id,username,age) values(?,?,?)";
 		// KeyHolder holder = new GeneratedKeyHolder();
 //		jdbcTemplate.update(new PreparedStatementCreator() {
@@ -50,7 +50,7 @@ public class UserRepository {
 		// long newUserId = holder.getKey().intValue();
 		// user.setId(newUserId);
 		
-		jdbcTemplate.update(INSERT_ALL, new Object[]{user.getId(),user.getUsername(),user.getAge()});
+		jdbcTemplate.update(sql, new Object[]{user.getId(),user.getUsername(),user.getAge()});
 		return user;
 	}
 

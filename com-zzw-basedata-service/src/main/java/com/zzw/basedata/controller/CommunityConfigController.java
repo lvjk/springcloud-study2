@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zzw.basedata.dao.CommunityConfigDao;
-import com.zzw.bean.ResultObject;
 import com.zzw.domain.basedata.CommunityConfig;
+import com.zzwtec.common.bean.ResultObject;
 
 @RestController
 public class CommunityConfigController {

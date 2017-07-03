@@ -10,8 +10,14 @@
 	<artifactId>com-zzw-basedata-service</artifactId>
 	<name>基础数据</name>
 	<description>微服务-基础数据模块</description>
-
+	
 	<dependencies>
+		<!-- 模块依赖 -->
+	 	<dependency>
+			<groupId>com.zzw.microservice</groupId>
+			<artifactId>com-zzw-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>		
+		</dependency>
 		<!-- 添加Eureka的依赖 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
