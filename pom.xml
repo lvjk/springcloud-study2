@@ -1,22 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.zzw.microservice</groupId>
-	<artifactId>com-zzw-parent</artifactId>
+	<groupId>com.zzwtec.microservice</groupId>
+	<artifactId>zzwtec-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>com-zzw-eureka</module>
-		<module>com-zzw-config</module>
-		<module>com-zzw-basedata-service</module>
-		<module>com-zzw-safety-service</module>
-		<module>com-zzw-entrance-guard-service</module>
-		<module>com-zzw-information-service</module>
-		<module>com-zzw-device-service</module>
-		<module>com-zzw-web</module>
-		<module>com-zzw-api</module>
-		<module>com-zzw-other</module>
-		<module>com-zzw-common</module>
+		<module>zzwtec-eureka</module>
+		<module>zzwtec-config</module>
+		<module>zzwtec-basedata</module>
+		<module>zzwtec-safety-service</module>
+		<module>zzwtec-entranceguard</module>
+		<module>zzwtec-information</module>
+		<module>zzwtec-device</module>
+		<module>zzwtec-web</module>
+		<module>zzwtec-api</module>
+		<module>zzwtec-other</module>
+		<module>zzwtec-common</module>
+		<module>zzwtec-permission</module>
 	</modules>
 	<!-- 使用最新的spring-boot版本 -->
 	<parent>
